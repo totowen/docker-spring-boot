@@ -5,7 +5,7 @@ source /etc/profile
 MYIMAGE=springboot/docker-spring-boot-test
 
 # uncomment if you need push
-docker login -u totowen -p s12152839
+#docker login -u totowen -p s12152839
 
 # stop all container
 docker kill $(docker ps -aq)
@@ -23,4 +23,4 @@ mvn package -e -X docker:build -DskipTest
 docker run -dp 8080:80 --name springboot-test ${MYIMAGE}
 
 # push image
-docker push ${MYIMAGE}
+#docker push ${MYIMAGE}
