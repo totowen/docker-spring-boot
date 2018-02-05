@@ -14,7 +14,7 @@ MYIMAGE=totowen/docker-spring-boot
 #docker rm $(docker ps -aq)
 
 # remove old images
-docker images | grep totowen/docker-spring-boot | awk '{print $3}' | xargs docker rmi
+docker images | grep totowen/docker-spring-boot | awk '{print $3}' | xargs docker rm
 
 # build jar and image
 mvn package -e -X docker:build -DskipTest
