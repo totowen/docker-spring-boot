@@ -43,6 +43,10 @@
 				<configuration>
 					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
 					<dockerDirectory>src/main/docker</dockerDirectory>
+					<imageTags>
+						<imageTag>${docker.image.prefix}</imageTag>
+						<imageTag>latest</imageTag>
+					</imageTags>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
@@ -53,6 +57,8 @@
 					<!-- 以下两行是为了docker push到DockerHub使用的。 -->
 					<serverId>docker-hub</serverId>
 					<registryUrl>https://index.docker.io/v1/</registryUrl>
+					<!--<serverId>docker-hub</serverId>
+					<registryUrl>https://index.docker.io/v1/</registryUrl>-->
 				</configuration>
 			</plugin>
     <!-- end::plugin[] -->

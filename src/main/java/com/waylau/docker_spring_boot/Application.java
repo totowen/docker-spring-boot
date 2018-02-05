@@ -17,7 +17,7 @@ public class Application {
 	@RequestMapping("/")
 	public String home() {
 		return "Hello Docker World. <br />"
-				+ "Welcome to <a href='http://www.baidu.com'>baidu.com</a></li>";
+				+ "Welcome to <a href='http://www.baidu.com'>baidu.comss</a></li>";
 	}
 
 	public static void main(String[] args) {
