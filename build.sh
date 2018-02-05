@@ -8,10 +8,10 @@ MYIMAGE=springboot/docker-spring-boot-test
 #docker login -u totowen -p s12152839
 
 # stop all container
-docker kill $(docker ps -aq)
+#docker kill $(docker ps -aq)
 
 # remove all container
-docker rm $(docker ps -aq)
+#docker rm $(docker ps -aq)
 
 # remove old images
 docker images | grep springboot/docker-spring-boot-test | awk '{print $3}' | xargs docker rmi
