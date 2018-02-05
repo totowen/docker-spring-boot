@@ -2,7 +2,7 @@
 
 source /etc/profile
 
-MYIMAGE=springboot/docker-spring-boot-test
+MYIMAGE=totowen/docker-spring-boot
 
 # uncomment if you need push
 #docker login -u totowen -p s12152839
@@ -14,7 +14,7 @@ MYIMAGE=springboot/docker-spring-boot-test
 #docker rm $(docker ps -aq)
 
 # remove old images
-docker images | grep springboot/docker-spring-boot-test | awk '{print $3}' | xargs docker rmi
+docker images | grep totowen/docker-spring-boot | awk '{print $3}' | xargs docker rmi
 
 # build jar and image
 mvn package -e -X docker:build -DskipTest
